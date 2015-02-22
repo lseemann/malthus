@@ -1,0 +1,59 @@
+body {
+  font-family: 'Helvetica',sans-serif;
+}
+h2 {
+  font-size: 16px;
+}
+.slider-outer {
+  margin-bottom: 40px;
+  max-width: 600px;
+  width: 100%;
+}
+.slider {
+  height: 10px;
+  margin: 0 0 40px;
+  width: 500px;
+}
+.noUi-handle:after, .noUi-handle:before {
+  height: 6px;
+}
+.noUi-target {
+  border-color: #aaa;
+}
+.range {
+  color     : #999;
+  height    : 20px;
+  margin-top: -10px;
+  width     : 500px;
+}
+.range .range-left {
+  float: left;
+}
+.range .range-right {
+  float: right;
+}
+.range-selected {
+  color      : black;
+  font-weight: 700;
+  margin     : 0 auto;
+  width      : 50px;
+}
+textarea {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+  width          : 900px;
+  padding        : 10px;
+  height         : 150px;
+}
+table {
+  border-collapse: collapse;
+  width          : 900px;
+}
+table td, table th {
+  padding: 3px;
+}
+table td {
+  border-bottom: 1px solid #aaa;
+}
+table th {
+  text-align: left;
+}
