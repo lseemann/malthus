@@ -15,5 +15,5 @@ Two tables are generated: A week-by-week table of total rats, sorted by generati
 * Each rat exists at a lightweight Javascript object. After 5 million rats or so, this has the potential to crash browsers.
 
 ##Demos##
-http://www.seemann.com/rats
-http://www.chicagomag.com/Chicago-Magazine/March-2015/here-a-rat-there-a-rat-everywhere-a-rat-rat/
+* http://www.seemann.com/rats
+* http://www.chicagomag.com/Chicago-Magazine/March-2015/here-a-rat-there-a-rat-everywhere-a-rat-rat/
