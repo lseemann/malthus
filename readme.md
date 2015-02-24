@@ -6,11 +6,14 @@ Four variables can be controlled:
 * Size of litters
 * Weeks until death
 
+Each rat is assigned gender randomly, so results can vary.
+
 Two tables are generated: A week-by-week table of total rats, sorted by generation, and a week-by-week table to new rats, sorted by generation.
 
 ##Caveats##
 * The real world is much more complex. It's unlikely that any biologist would approve of this model.
 * Each rat exists at a lightweight Javascript object. After 5 million rats or so, this has the potential to crash browsers.
 
-##Demo##
+##Demos##
 http://www.seemann.com/rats
+http://www.chicagomag.com/Chicago-Magazine/March-2015/here-a-rat-there-a-rat-everywhere-a-rat-rat/
