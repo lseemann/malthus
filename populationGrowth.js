@@ -13,7 +13,7 @@ var weeks = 51,
   maxGenerations = 8;
 
 // Bind the sliders.
-// Ranges are limited partly to prevent estimates so big that will crash browser
+// Ranges are limited partly to prevent estimates so big that the browser crashes
 $('#fertility').noUiSlider({
   start: 9,
   connect: "lower",
