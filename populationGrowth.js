@@ -13,7 +13,7 @@ var weeks = 51,
   maxGenerations = 8;
 
 // Bind the sliders.
-// Ranges are limited partly to prevent estimates so big that will crash browser
+// Ranges are limited partly to prevent estimates so big that the browser crashes
 $('#fertility').noUiSlider({
   start: 9,
   connect: "lower",
@@ -25,13 +25,13 @@ $('#fertility').noUiSlider({
   }
 });
 $('#ratsPerLitter').noUiSlider({
-  start: 6,
+  start: 11,
   connect: "lower",
   orientation: "horizontal",
   step: 1,
   range: {
     'min': 1,
-    'max': 12
+    'max': 15
   }
 });
 $('#litterFrequency').noUiSlider({
@@ -92,6 +92,7 @@ function Rat () {
     };
   this.descendents = [];
   this.generation = 0;
+  this.female = true;
 }
 
 function calculateInput() {
@@ -145,6 +146,13 @@ function checkDescendents(rat) {
 function spawn(rat) {
   for (var i = ratsPerLitter; i > 0; i--) {
     var baby = new Rat();
+    var r = Math.random();
+    if (r > .5) {
+      baby.female = true;
+    }
+    else {
+      baby.female = false;
+    }
     baby.birth = currentWeek;
     baby.generation = rat.generation + 1
     rat.descendents.push(baby);
@@ -155,8 +163,8 @@ function spawn(rat) {
 }
 
 function havingLitter(rat) {
-  // If fertile AND week coincides with litter frequency AND not dead yet …
-  if (rat.age() >= fertility && (rat.age() - fertility) % litterFrequency ===0 && (rat.age() < morbidity)) {
+  // If female AND fertile AND week coincides with litter frequency AND not dead yet …
+  if (rat.female == true && rat.age() >= fertility && (rat.age() - fertility) % litterFrequency ===0 && (rat.age() < morbidity)) {
     return true;
   }
   else {
